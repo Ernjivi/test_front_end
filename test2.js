@@ -26,5 +26,5 @@ console.log(
     toJadenSmithPhilosophy(toJadenSmithString)
     .split(' ')
     .every(wordIsCapitalized),
-    'Todas las palabras en la frase inician con mayúscula.')
+    'Todas las palabras en la frase inician con mayúscula.');
 console.log('---'.repeat(20));
