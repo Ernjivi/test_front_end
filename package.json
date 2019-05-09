@@ -1,0 +1,15 @@
+{
+  "name": "test_front_end",
+  "version": "0.1.0",
+  "description": "Test Front End Developer",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "nodemon test1.js",
+    "test2": "nodemon test2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
