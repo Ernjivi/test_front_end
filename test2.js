@@ -28,4 +28,7 @@ console.log(
     .split(' ')
     .every(wordIsCapitalized),
     'Todas las palabras en la frase inician con mayúscula.');
+console.log(
+    toJadenSmithPhilosophy(toJadenSmithString) === 'How Can Mirrors Be Real If Our Eyes Aren\'t Real',
+    'La frase fue convertida a filosofía de Jaden Smith.')
 console.log('---'.repeat(20));
