@@ -2,6 +2,7 @@
 // suma en binario, la conversion a binario puede suceder antes o después de la 
 // suma. El tipo del return debe ser un string.
 
+const sumToBinary = (a, b) => (a + b).toString(2)
 
 // Tests
 console.log('TESTS', new Date().toISOString())
