@@ -17,24 +17,26 @@ const toJadenSmithPhilosophy = str =>
     .join(" ");
 
 // Tests
-const toJadenSmithString = 'How can mirrors be real if our eyes aren\'t real'
-const wordIsCapitalized = word => /^[A-Z]/.test(word);
-console.log('TESTS', new Date().toISOString())
-console.log('---'.repeat(20))
-console.log(
-    typeof toJadenSmithPhilosophy !== 'undefined',
-    'La función toJadenSmithPhilosophy existe.');
-console.log(
-    typeof toJadenSmithPhilosophy(toJadenSmithString) === 'string',
-    'El return de la function toJadenSmithPhilosophy es string.');
-console.log(
-    toJadenSmithPhilosophy(toJadenSmithString)
-    .split(' ')
-    .every(wordIsCapitalized),
-    'Todas las palabras en la frase inician con mayúscula.');
-console.log(
-    toJadenSmithPhilosophy(toJadenSmithString) === 'How Can Mirrors Be Real If Our Eyes Aren\'t Real',
-    'La frase fue convertida a filosofía de Jaden Smith.')
-console.log('---'.repeat(20));
-
-console.log(toJadenSmithPhilosophy(toJadenSmithString));
+describe("toJadenSmithPhilosophy", () => {
+    it("El return de la function toJadenSmithPhilosophy es string. 💪", () => {
+        const toJadenSmithString = "How can mirrors be real if our eyes aren't real";
+        const wordIsCapitalized = word => /^[A-Z]/;
+        expect(typeof toJadenSmithPhilosophy(toJadenSmithString) === 'string').toEqual(true)
+    });
+    it("Todas las palabras en la frase inician con mayúscula. 🤟", () => {
+        const toJadenSmithString = "How can mirrors be real if our eyes aren't real"
+        const wordIsCapitalized = word => /^[A-Z]/;
+        expect(
+            toJadenSmithPhilosophy(toJadenSmithString)
+            .split(" ")
+            .every(wordIsCapitalized)
+        ).toEqual(true);
+    });
+    it("La frase fue convertida a filosofía de Jaden Smith. 👍", () => {
+        console.log = jasmine.createSpy("log");
+        const toJadenSmithString = "How can mirrors be real if our eyes aren't real"
+        expect(
+          toJadenSmithPhilosophy(toJadenSmithString) === "How Can Mirrors Be Real If Our Eyes Aren't Real"
+        ).toEqual(true);
+    });
+})
