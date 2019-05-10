@@ -10,7 +10,7 @@ describe('sumToBinary', () => {
       expect(typeof sumToBinary(1, 2) === 'string').toEqual(true);
     });
     it("La suma de 254 y 1 uno en binario es 11111111 🤩", () => {
-      expect(sumToBinary(254, 1) === "1111111").toEqual(true);
+      expect(sumToBinary(254, 1) === "11111111").toEqual(true);
     });
     it("La suma de 254 y 1 uno en binario no es 1111 😤", () => {
       expect(sumToBinary(254, 1) === "1111").toEqual(false);
