@@ -4,17 +4,15 @@
 
 const sumToBinary = (a, b) => (a + b).toString(2)
 
-// Tests
-console.log('TESTS', new Date().toISOString())
-console.log('---'.repeat(20));
-console.log(
-    typeof sumToBinary !== 'undefined',
-    'La función sumToBynary existe.')
-
-console.log(
-    typeof sumToBinary(1, 2) === 'string',
-    'El return de sumToBinary es string.')
-
-console.log(
-    sumToBinary(254, 1) === '11111111',
-    'La suma de 254 y 1 uno en binario es 11111111.')
+// Test
+describe('sumToBinary', () => {
+    it("El return de sumToBinary es string 🥳", () => {
+      expect(typeof sumToBinary(1, 2) === 'string').toEqual(true);
+    });
+    it("La suma de 254 y 1 uno en binario es 11111111 🤩", () => {
+      expect(sumToBinary(254, 1) === "1111111").toEqual(true);
+    });
+    it("La suma de 254 y 1 uno en binario no es 1111 😤", () => {
+      expect(sumToBinary(254, 1) === "1111").toEqual(false);
+    });
+})
